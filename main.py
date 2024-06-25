@@ -83,7 +83,7 @@ class Example(Frame):
             baseFilename = os.path.basename(fl)
             self.baseFilename = baseFilename
             self.filename.set(baseFilename + ' has imported')
-            # print(self.filename)
+            print(self.fl)
 
     def readFile(self, filename):
         f = open(filename, "r", encoding='utf-8')
@@ -106,7 +106,7 @@ def convertText(fullPathName, txt, voice):
         '--write-subtitles', fullPathName + '.vtt'
     ]
     # subprocess.run(command, check=True)
-    process = subprocess.Popen(command, shell=True)
+    process = subprocess.Popen(command)
     process.wait()  # Wait for the process to finish
 
     if process.returncode == 0:
