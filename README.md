@@ -10,8 +10,13 @@ python3 -m venv .venv
 ```
 
 ### 2. activate venv
+Linux && MacOS
 ```shell
 source .venv/bin/activate
+```
+Windows
+```shell
+.\.venv\Scripts\activate
 ```
 
 ### 3. install dependence
